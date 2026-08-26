@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delivery Operations Director — Strategic Brief</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Roboto+Serif:ital,opsz,wght@1,8..144,400;1,500;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'vaimo-violet': '#4B3F72',
+            'vaimo-violet-dark': '#2E2646',
+            'vaimo-yellow': '#F5B000',
+            'vaimo-jet': '#333333',
+            'vaimo-grey': '#D8D8D8',
+            'vaimo-bg-soft': '#F8F9FA'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Roboto Serif', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    /* Smooth CSS Snap Scroll */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Inter', sans-serif;
+      color: #333333;
+    }
+
+    .snap-container {
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+      height: 100vh;
+      scroll-behavior: smooth;
+    }
+
+    .slide {
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      min-height: 100vh;
+    }
+
+    /* Custom Scrollbar */
+    .snap-container::-webkit-scrollbar {
+      width: 6px;
+    }
+    .snap-container::-webkit-scrollbar-thumb {
+      background-color: rgba(75, 63, 114, 0.3);
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body class="bg-vaimo-bg-soft text-vaimo-jet">
+
+  <!-- Side Navigation Dots -->
+  <nav class="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden md:flex flex-col gap-4 bg-white/40 backdrop-blur-md p-3 rounded-full border border-gray-200/50 shadow-sm">
+    <a href="#slide-1" class="dot-nav w-3 h-3 rounded-full bg-vaimo-violet transition-all duration-300" title="Slide 1"></a>
+    <a href="#slide-2" class="dot-nav w-3 h-3 rounded-full bg-gray-300 hover:bg-vaimo-violet transition-all duration-300" title="Slide 2"></a>
+    <a href="#slide-3" class="dot-nav w-3 h-3 rounded-full bg-gray-300 hover:bg-vaimo-violet transition-all duration-300" title="Slide 3"></a>
+    <a href="#slide-4" class="dot-nav w-3 h-3 rounded-full bg-gray-300 hover:bg-vaimo-violet transition-all duration-300" title="Slide 4"></a>
+    <a href="#slide-5" class="dot-nav w-3 h-3 rounded-full bg-gray-300 hover:bg-vaimo-violet transition-all duration-300" title="Slide 5"></a>
+  </nav>
+
+  <!-- Main Snap Scroll Container -->
+  <main class="snap-container">
+
+    <!-- SLIDE 1: Intro & Vision -->
+    <section id="slide-1" class="slide bg-vaimo-violet-dark text-white relative flex flex-col justify-between p-8 md:p-16">
+      <!-- Top Brand Accent -->
+      <div class="flex justify-between items-center border-b border-white/10 pb-6">
+        <span class="text-xs font-bold tracking-widest text-vaimo-yellow uppercase">Vaimo Leadership Brief</span>
+        <span class="text-xs font-light text-gray-300">Slide 01 / 05</span>
+      </div>
+
+      <!-- Main Content -->
+      <div class="my-auto max-w-5xl">
+        <h1 class="text-4xl md:text-6xl font-medium tracking-tight mb-4">
+          Delivery <span class="font-serif italic text-vaimo-yellow">Operations</span> Director
+        </h1>
+        <p class="text-lg md:text-xl font-light text-gray-300 max-w-2xl mb-12">
+          My starting point and strategic vision for unifying our operating models into one high-performing Delivery organisation.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6 text-left">
+          <!-- Card 1 -->
+          <div class="bg-white/5 border border-white/10 p-6 rounded-lg backdrop-blur-sm">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-vaimo-yellow mb-3">The opportunity</h3>
+            <p class="text-sm font-light leading-relaxed text-gray-200">
+              Moving from three market-based operating models toward one Delivery organisation allows us to pool expertise, create clarity and consistency, and reduce duplicated ways of working — while honoring distinct client needs.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white/5 border border-white/10 p-6 rounded-lg backdrop-blur-sm">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-vaimo-yellow mb-3">My vision</h3>
+            <p class="text-sm font-light leading-relaxed text-gray-200">
+              A Delivery organisation where people know what good looks like, have the support and tools to deliver it, and where we continuously improve how we create value for our clients — without adding unnecessary process.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white/5 border border-white/10 p-6 rounded-lg backdrop-blur-sm">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-vaimo-yellow mb-3">What I bring</h3>
+            <p class="text-sm font-medium text-white mb-2">Clarity from complexity.</p>
+            <p class="text-sm font-light leading-relaxed text-gray-200">
+              Deep organizational knowledge combined with a pragmatic approach to making things simpler, more consistent, and easier to execute on the ground.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Tagline -->
+      <div class="border-t border-white/10 pt-6">
+        <p class="text-xs md:text-sm font-bold text-gray-300 text-center tracking-wide">
+          One organisation <span class="text-vaimo-yellow px-2">·</span> Clear expectations <span class="text-vaimo-yellow px-2">·</span> Stronger capability <span class="text-vaimo-yellow px-2">·</span> Value over process
+        </p>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: First Focus (30-60-90 / Immediate Start) -->
+    <section id="slide-2" class="slide bg-white text-vaimo-jet relative flex flex-col justify-between p-8 md:p-16">
+      <div class="flex justify-between items-center border-b border-vaimo-grey pb-4">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-medium text-vaimo-violet-dark">
+            If I started <span class="font-serif italic text-vaimo-violet">tomorrow</span>
+          </h2>
+          <p class="text-sm font-medium text-gray-500">First focus: understand, connect, stabilise</p>
+        </div>
+        <span class="text-xs font-light text-gray-400">Slide 02 / 05</span>
+      </div>
+
+      <div class="my-auto grid md:grid-cols-3 gap-6 max-w-6xl mx-auto w-full py-6">
+        <!-- 01 -->
+        <div class="bg-vaimo-bg-soft p-6 rounded-lg border-l-4 border-vaimo-violet flex flex-col justify-between">
+          <div>
+            <div class="text-3xl font-bold text-vaimo-violet mb-2">01</div>
+            <h3 class="text-lg font-medium text-vaimo-violet-dark mb-3">Understand & align</h3>
+            <ul class="text-sm font-light space-y-3 text-gray-700">
+              <li>• Align with three vertical leaders on vision, priorities, and expectations.</li>
+              <li>• Establish an effective working rhythm with L and A early.</li>
+              <li>• Connect with PMs and Delivery Managers to uncover ground reality, gaps, and emerging drift.</li>
+              <li>• Map true vertical differences vs. unnecessary variation.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <div class="bg-vaimo-bg-soft p-6 rounded-lg border-l-4 border-vaimo-violet flex flex-col justify-between">
+          <div>
+            <div class="text-3xl font-bold text-vaimo-violet mb-2">02</div>
+            <h3 class="text-lg font-medium text-vaimo-violet-dark mb-3">Stabilise & protect</h3>
+            <ul class="text-sm font-light space-y-3 text-gray-700">
+              <li>• Support high-change teams while letting others settle.</li>
+              <li>• Reinforce critical routines underway instead of starting new ones.</li>
+              <li>• <strong>Audit inherited initiatives:</strong> Map ownership, push valuable work to completion, and sunset low-value items.</li>
+              <li>• Ensure valuable work isn't lost during transition.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 03 -->
+        <div class="bg-vaimo-bg-soft p-6 rounded-lg border-l-4 border-vaimo-violet flex flex-col justify-between">
+          <div>
+            <div class="text-3xl font-bold text-vaimo-violet mb-2">03</div>
+            <h3 class="text-lg font-medium text-vaimo-violet-dark mb-3">Create clarity</h3>
+            <ul class="text-sm font-light space-y-3 text-gray-700">
+              <li>• Identify essential common standards across Delivery.</li>
+              <li>• Systematically eliminate duplicated ways of working.</li>
+              <li>• Focus on keeping processes simple and immediately useful for PMs and Delivery Managers.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Core Principle Callout -->
+      <div class="bg-vaimo-violet text-white p-5 rounded-lg border-l-4 border-vaimo-yellow">
+        <p class="text-xs font-bold uppercase tracking-wider text-vaimo-yellow mb-1">Guiding Principle</p>
+        <p class="text-sm font-light italic">
+          "Don't change everything because the organisation changed. First understand what needs to change, what needs to continue, and what should stop."
+        </p>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: Strategic Roadmap & Outcomes -->
+    <section id="slide-3" class="slide bg-vaimo-bg-soft text-vaimo-jet relative flex flex-col justify-between p-8 md:p-16">
+      <div class="flex justify-between items-center border-b border-vaimo-grey pb-4">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-medium text-vaimo-violet-dark">
+            From stabilising to <span class="font-serif italic text-vaimo-violet">improving</span>
+          </h2>
+          <p class="text-sm font-medium text-gray-500">The longer-term shift</p>
+        </div>
+        <span class="text-xs font-light text-gray-400">Slide 03 / 05</span>
+      </div>
+
+      <div class="my-auto max-w-6xl mx-auto w-full space-y-8">
+        <!-- 4-Stage Visual Pipeline -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <div class="bg-white p-4 rounded-lg shadow-sm border-t-4 border-vaimo-violet">
+            <span class="text-xs font-bold text-vaimo-violet uppercase block mb-1">Stage 1</span>
+            <span class="text-sm font-medium text-vaimo-violet-dark">STABILISE</span>
+            <p class="text-xs font-light text-gray-500 mt-1">Get the new org working well</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-sm border-t-4 border-vaimo-violet">
+            <span class="text-xs font-bold text-vaimo-violet uppercase block mb-1">Stage 2</span>
+            <span class="text-sm font-medium text-vaimo-violet-dark">ALIGN</span>
+            <p class="text-xs font-light text-gray-500 mt-1">Clear ownership & ways of working</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-sm border-t-4 border-vaimo-violet">
+            <span class="text-xs font-bold text-vaimo-violet uppercase block mb-1">Stage 3</span>
+            <span class="text-sm font-medium text-vaimo-violet-dark">ENABLE</span>
+            <p class="text-xs font-light text-gray-500 mt-1">Build capability & shared tools</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-sm border-t-4 border-vaimo-yellow">
+            <span class="text-xs font-bold text-vaimo-violet uppercase block mb-1">Stage 4</span>
+            <span class="text-sm font-medium text-vaimo-violet-dark">IMPROVE</span>
+            <p class="text-xs font-light text-gray-500 mt-1">Continuous efficiency & client value</p>
+          </div>
+        </div>
+
+        <!-- Core Outcomes Quad Grid -->
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="text-sm font-bold text-vaimo-violet uppercase tracking-wider mb-2">One Delivery organisation</h3>
+            <ul class="text-sm font-light text-gray-600 space-y-1">
+              <li>• Shared expertise rather than duplicated capability</li>
+              <li>• Consistent principles and expectations</li>
+              <li>• Flexibility where vertical or client context genuinely requires it</li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="text-sm font-bold text-vaimo-violet uppercase tracking-wider mb-2">PMs enabled to do great work</h3>
+            <ul class="text-sm font-light text-gray-600 space-y-1">
+              <li>• Clear guidelines on how to succeed without guessing</li>
+              <li>• Simple processes, useful tools, and strong peer support</li>
+              <li>• Reduced administrative overhead</li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="text-sm font-bold text-vaimo-violet uppercase tracking-wider mb-2">Continuous improvement</h3>
+            <ul class="text-sm font-light text-gray-600 space-y-1">
+              <li>• Continue execution of Flow & value-based delivery</li>
+              <li>• Shift focus from process adoption to value delivery</li>
+              <li>• Integrate AI to eliminate low-value manual tasks</li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="text-sm font-bold text-vaimo-violet uppercase tracking-wider mb-2">Delivery × Engineering partnership</h3>
+            <ul class="text-sm font-light text-gray-600 space-y-1">
+              <li>• Closer collaboration with Engineering Director & Managers</li>
+              <li>• Solve systemic delivery issues together rather than in silos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center text-xs text-gray-400">
+        Focus: Moving from process adoption to measurable client value
+      </div>
+    </section>
+
+    <!-- SLIDE 4: Strengths & Personal Growth -->
+    <section id="slide-4" class="slide bg-white text-vaimo-jet relative flex flex-col justify-between p-8 md:p-16">
+      <div class="flex justify-between items-center border-b border-vaimo-grey pb-4">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-medium text-vaimo-violet-dark">
+            What I <span class="font-serif italic text-vaimo-violet">bring</span>
+          </h2>
+          <p class="text-sm font-medium text-gray-500">My strengths — and where I want to grow</p>
+        </div>
+        <span class="text-xs font-light text-gray-400">Slide 04 / 05</span>
+      </div>
+
+      <div class="my-auto grid md:grid-cols-2 gap-8 max-w-6xl mx-auto w-full py-4">
+        <!-- Column 1: What I Bring -->
+        <div class="bg-vaimo-bg-soft p-6 rounded-lg border border-gray-200">
+          <h3 class="text-sm font-bold text-vaimo-violet uppercase tracking-wider mb-4 border-b border-gray-200 pb-2">What I bring</h3>
+          <div class="space-y-3 text-sm font-light">
+            <div>
+              <strong class="font-medium text-vaimo-violet-dark">Clarity:</strong> Turning complexity and ambiguity into actionable plans.
+            </div>
+            <div>
+              <strong class="font-medium text-vaimo-violet-dark">Organisational knowledge:</strong> Deep understanding of current processes, tools, and people.
+            </div>
+            <div>
+              <strong class="font-medium text-vaimo-violet-dark">Delivery perspective:</strong> Balancing ideal operating models with ground reality.
+            </div>
+            <div>
+              <strong class="font-medium text-vaimo-violet-dark">Relationships & trust:</strong> Strong existing baseline for building alignment.
+            </div>
+            <div>
+              <strong class="font-medium text-vaimo-violet-dark">Pragmatism:</strong> Process should improve jobs, not increase admin.
+            </div>
+            <div>
+              <strong class="font-medium text-vaimo-violet-dark">Curiosity & growth:</strong> Passion for learning, improving, and scaling impact.
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Where I Want to Grow -->
+        <div class="bg-vaimo-bg-soft p-6 rounded-lg border border-gray-200 flex flex-col justify-between">
+          <div>
+            <h3 class="text-sm font-bold text-vaimo-violet uppercase tracking-wider mb-4 border-b border-gray-200 pb-2">Where I want to grow</h3>
+            <div class="space-y-3 text-sm font-light">
+              <div>
+                <strong class="font-medium text-vaimo-violet-dark">Operate at a higher altitude:</strong> Moving from detail execution to system-level improvements.
+              </div>
+              <div>
+                <strong class="font-medium text-vaimo-violet-dark">Enable rather than solve:</strong> Structuring support so teams solve their own challenges.
+              </div>
+              <div>
+                <strong class="font-medium text-vaimo-violet-dark">Influence across stakeholders:</strong> Balancing strong personalities across Client Engagement Directors.
+              </div>
+              <div>
+                <strong class="font-medium text-vaimo-violet-dark">Broader leadership:</strong> Partnering deeply with Engineering and executive leadership.
+              </div>
+            </div>
+          </div>
+
+          <!-- Challenge Box -->
+          <div class="mt-6 p-4 bg-white rounded border-l-4 border-vaimo-yellow shadow-sm">
+            <span class="text-xs font-bold uppercase text-vaimo-violet block">My challenge to myself</span>
+            <p class="text-sm font-medium text-vaimo-violet-dark italic mt-1">"Be close to the teams, but not caught in the detail."</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center text-xs text-gray-400">
+        Self-awareness & Leadership Maturity
+      </div>
+    </section>
+
+    <!-- SLIDE 5: Support Needed & Mutual Success -->
+    <section id="slide-5" class="slide bg-vaimo-violet text-white relative flex flex-col justify-between p-8 md:p-16">
+      <div class="flex justify-between items-center border-b border-white/10 pb-4">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-medium">
+            What I need <span class="font-serif italic text-vaimo-yellow">from you</span>
+          </h2>
+          <p class="text-sm font-light text-gray-300">What I would need from my manager to succeed</p>
+        </div>
+        <span class="text-xs font-light text-gray-300">Slide 05 / 05</span>
+      </div>
+
+      <div class="my-auto max-w-5xl mx-auto w-full space-y-8 py-4">
+        <!-- 4 Requirements Grid -->
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-vaimo-violet-dark/60 p-5 rounded-lg border border-white/10">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="bg-vaimo-yellow text-vaimo-violet-dark font-bold text-xs px-2 py-1 rounded">1</span>
+              <h3 class="text-base font-medium text-white">Clear mandate & backing</h3>
+            </div>
+            <p class="text-sm font-light text-gray-300 leading-relaxed">
+              Clarity on role mandate and backing when establishing consistency requires difficult decisions or conversations across the organization.
+            </p>
+          </div>
+
+          <div class="bg-vaimo-violet-dark/60 p-5 rounded-lg border border-white/10">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="bg-vaimo-yellow text-vaimo-violet-dark font-bold text-xs px-2 py-1 rounded">2</span>
+              <h3 class="text-base font-medium text-white">Trust & space</h3>
+            </div>
+            <p class="text-sm font-light text-gray-300 leading-relaxed">
+              Trust to operate at Director level — setting direction, enabling others, and making decisions — rather than being pulled into operational detail.
+            </p>
+          </div>
+
+          <div class="bg-vaimo-violet-dark/60 p-5 rounded-lg border border-white/10">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="bg-vaimo-yellow text-vaimo-violet-dark font-bold text-xs px-2 py-1 rounded">3</span>
+              <h3 class="text-base font-medium text-white">Challenge</h3>
+            </div>
+            <p class="text-sm font-light text-gray-300 leading-relaxed">
+              Challenge me when I slip back into an Operations Manager mindset or solve problems that belong elsewhere in the organization.
+            </p>
+          </div>
+
+          <div class="bg-vaimo-violet-dark/60 p-5 rounded-lg border border-white/10">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="bg-vaimo-yellow text-vaimo-violet-dark font-bold text-xs px-2 py-1 rounded">4</span>
+              <h3 class="text-base font-medium text-white">Sparring</h3>
+            </div>
+            <p class="text-sm font-light text-gray-300 leading-relaxed">
+              Regular, honest sparring on stakeholder management, prioritization, and knowing where to push vs. where to let things settle.
+            </p>
+          </div>
+        </div>
+
+        <!-- Strategic Closing Callout -->
+        <div class="bg-white/10 border border-vaimo-yellow/40 p-6 rounded-lg text-center">
+          <span class="text-xs font-bold uppercase text-vaimo-yellow tracking-widest block mb-2">What I want us to achieve together</span>
+          <p class="text-base md:text-lg font-light text-white max-w-3xl mx-auto">
+            A Delivery organisation that is clearer, more capable, and more consistent — while remaining pragmatic enough to serve different markets and clients well.
+          </p>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-4 text-center">
+        <p class="text-xs font-bold text-gray-300 tracking-wider">
+          Thank You
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Interactive Scroll Indicator JS Script -->
+  <script>
+    const sections = document.querySelectorAll("section");
+    const navDots = document.querySelectorAll(".dot-nav");
+
+    const observerOptions = {
+      root: document.querySelector('.snap-container'),
+      threshold: 0.6
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute("id");
+          navDots.forEach((dot) => {
+            if (dot.getAttribute("href") === `#${id}`) {
+              dot.classList.add("bg-vaimo-yellow", "scale-125");
+              dot.classList.remove("bg-gray-300", "bg-vaimo-violet");
+            } else {
+              dot.classList.remove("bg-vaimo-yellow", "scale-125");
+              dot.classList.add("bg-gray-300");
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach((section) => observer.observe(section));
+  </script>
+</body>
+</html>
